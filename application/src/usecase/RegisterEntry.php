@@ -2,7 +2,7 @@
 
 namespace timeMonitor\application\usecase;
 
-use domain\model\TimeRecord;
+use timeMonitor\domain\model\TimeRecord;
 
 interface RegisterEntry
 {
