@@ -1,0 +1,14 @@
+{
+    "autoload": {
+        "psr-4": {
+            "domain\\": "src/",
+            "model\\": "src/model/",
+            "vo\\": "src/vo",
+            "domain\\test\\": "test/",
+            "util\\": "util/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "9.5"
+    }
+}
