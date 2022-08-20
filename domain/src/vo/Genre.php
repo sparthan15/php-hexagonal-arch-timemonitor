@@ -1,6 +1,6 @@
 <?php
 
-namespace domain\vo;
+namespace timeMonitor\domain\vo;
 
 enum Genre{
     case MALE;

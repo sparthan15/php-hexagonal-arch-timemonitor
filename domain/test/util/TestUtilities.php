@@ -1,12 +1,12 @@
 <?php
 
-namespace domain\test\util;
+namespace timeMonitor\domain\test\util;
 
 use DateTime;
-use domain\model\Employee;
-use domain\model\TimeRecord;
-use domain\model\User;
-use domain\vo\Genre;
+use timeMonitor\domain\model\Employee;
+use timeMonitor\domain\model\TimeRecord;
+use timeMonitor\domain\model\User;
+use timeMonitor\domain\vo\Genre;
 
 class TestUtilities
 {

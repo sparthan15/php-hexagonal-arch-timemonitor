@@ -1,10 +1,10 @@
 {
     "autoload": {
         "psr-4": {
-            "domain\\": "src/",
+            "timeMonitor\\domain\\": "src/",
             "model\\": "src/model/",
             "vo\\": "src/vo",
-            "domain\\test\\": "test/",
+            "timeMonitor\\domain\\test\\": "test/",
             "util\\": "util/"
         }
     },

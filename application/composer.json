@@ -3,10 +3,12 @@
         "psr-4": {
             "timeMonitor\\application\\":"src/",
             "usecase\\":"usecase/",
-            "input\\":"ports/input",
-            "output\\":"ports/output",
+            "timeMonitor\\application\\ports\\":"src/ports/",
+            "input\\":"input/",
+            "output\\":"output/",
             "test\\":"test/",
-            "util\\":"util/"
+            "util\\":"util/",
+            "timeMonitor\\domain\\test\\util\\": "../domain/test/util/"
         }
     },
     "require-dev": {

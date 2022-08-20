@@ -5,18 +5,20 @@ It structured with an Hexagonal Architecture, allowing test every layer independ
 
 ## Installation
 
-TODO
+Domain and application layer need [PHPUnit 9.5](https://phpunit.readthedocs.io/en/9.5/), so you need to install de dependencies for every layer, go into every layer folder 
 
 ```bash
-pip install foobar
+composer install
 ```
 
 ## Running test
-
+Hexagonal Architecture allow to test every layer independetly, so that to test each layer you need to run code below into the root folder
 ```
-.\vendor\bin\phpunit test --testdox
+ .\domain\vendor\bin\phpunit domain/test --testdox
 ```
-
+```
+ .\application\vendor\bin\phpunit domain/test --testdox
+```
 ## Author
 Charlie Gamboa Hernandez
 

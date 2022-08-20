@@ -1,8 +1,8 @@
 <?php
 
-use domain\model\TimeRecord;
-use domain\test\util\TestUtilities;
+use timeMonitor\domain\model\TimeRecord; 
 use PHPUnit\Framework\TestCase;
+use timeMonitor\domain\test\util\TestUtilities;
 
 class TimeRecordTest extends TestCase
 {

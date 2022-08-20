@@ -1,8 +1,8 @@
 <?php
 
-namespace domain\model;
+namespace timeMonitor\domain\model;
 
-use domain\vo\Genre;
+use timeMonitor\domain\vo\Genre;
 
 class Employee
 {

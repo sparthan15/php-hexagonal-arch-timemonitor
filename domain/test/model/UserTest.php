@@ -1,8 +1,8 @@
 <?php
 
-use domain\model\User;
-use domain\test\util\TestUtilities;
-use PHPUnit\Framework\TestCase; 
+use timeMonitor\domain\model\User;
+use PHPUnit\Framework\TestCase;
+use timeMonitor\domain\test\util\TestUtilities;
 
 class UserTest extends TestCase
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace domain\model;
+namespace timeMonitor\domain\model;
 
 use DateTime;
 use DateTimeZone;
