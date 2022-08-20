@@ -1,13 +1,12 @@
 {
     "autoload": {
         "psr-4": {
-            "timeMonitor\\application\\":"src/",
-            "usecase\\":"src/usecase/",
-            "ports\\":"src/ports/",
-            "input\\":"src/ports/input/",
-            "output\\":"src/ports/output/",
-            "test\\":"test/",
-            "util\\":"test/util/",
+            "timeMonitor\\application\\": "src/",
+            "usecase\\": "src/usecase/",
+            "ports\\input\\": "src/ports/input/",
+            "ports\\output\\": "src/ports/output/",
+            "test\\": "test/",
+            "util\\": "test/util/",
             "timeMonitor\\domain\\test\\util\\": "../domain/test/util/",
             "timeMonitor\\domain\\model\\": "../domain/src/model/",
             "timeMonitor\\domain\\vo\\": "../domain/src/vo/"
