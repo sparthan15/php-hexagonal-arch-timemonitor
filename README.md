@@ -17,8 +17,15 @@ Hexagonal Architecture allow to test every layer independetly, so that to test e
  .\domain\vendor\bin\phpunit domain/test --testdox
 ```
 ```
- .\application\vendor\bin\phpunit domain/test --testdox
+ .\application\vendor\bin\phpunit application/test --testdox
 ```
+
+# Issues
+if you get an error related to autoloading classes when executing phpunit in the infrastructure layer, then check that you have an autoload.php files generated inside vendor/ if not, then execute 
+```
+composer dump-autoload
+```
+This command will generate the autoload.php file
 ## Author
 Charlie Gamboa Hernandez
 

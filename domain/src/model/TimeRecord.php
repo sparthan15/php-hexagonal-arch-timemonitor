@@ -10,16 +10,16 @@ class TimeRecord
 
     private ?string $id;
     private Employee $employee;
-    private DateTime $inDateTime;
-    private ?DateTime $outDateTime;
+    private DateTime $checkInDateTime;
+    private ?DateTime $checkOutDateTime;
 
 
     function __construct(Employee $employee, string $id,  DateTime $inDateTime)
     {
         $this->id = $id;
         $this->employee = $employee;
-        $this->inDateTime = $inDateTime;
-        $this->outDateTime = null;
+        $this->checkInDateTime = $inDateTime;
+        $this->checkOutDateTime = null;
     }
 
 
@@ -34,27 +34,20 @@ class TimeRecord
         return $this;
     }
 
-    public function getOutDateTime(): DateTime
+    public function getCheckOutDateTime(): DateTime
     {
-        return $this->outDateTime;
+        return $this->checkOutDateTime;
     }
 
-    public function setOutDateTime($outDateTime): TimeRecord
+    public function setCheckOutDateTime(DateTime $checkOutDateTime): TimeRecord
     {
-        $this->outDateTime = $outDateTime;
+        $this->checkOutDateTime = $checkOutDateTime;
         return $this;
     }
 
-    public function getInDateTime(): DateTime
+    public function getCheckInDateTime(): DateTime
     {
-        return $this->inDateTime;
-    }
-
-
-    public function setInDateTime($inDateTime): TimeRecord
-    {
-        $this->inDateTime = $inDateTime;
-        return $this;
+        return $this->checkInDateTime;
     }
 
     public function getEmployee(): Employee

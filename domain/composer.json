@@ -4,8 +4,7 @@
             "timeMonitor\\domain\\": "src/",
             "model\\": "model/",
             "vo\\": "vo/",
-            "timeMonitor\\domain\\test\\": "test/",
-            "util\\": "util/"
+            "tests\\util\\": "tests/util/"
         }
     },
     "require-dev": {

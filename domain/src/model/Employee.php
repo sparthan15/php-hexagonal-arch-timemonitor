@@ -1,22 +1,25 @@
 <?php
-
 namespace timeMonitor\domain\model;
 
 use timeMonitor\domain\vo\Genre;
 
 class Employee
 {
+
     private User $user;
+
     private string $name;
+
     private string $lastName;
+
     private int $age;
+
     private Genre $genre;
 
     public function __construct(User $user, string $id, string $name, string $lastName, int $age, Genre $genre)
     {
         $this->user = $user;
-        $this->userName =
-            $this->name = $name;
+        $this->userName = $this->name = $name;
         $this->lastName = $lastName;
         $this->age = $age;
         $this->genre = $genre;
@@ -35,7 +38,7 @@ class Employee
 
     function isMale(): bool
     {
-        return $this->genre == Genre::MALE;
+        return $this->genre->isMale();
     }
 
     function getName(): string

@@ -3,7 +3,6 @@
 namespace timeMonitor\domain\model;
 
 use DateTime;
-use domain\vo\Genre;
 
 class User
 {
