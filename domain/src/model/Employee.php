@@ -1,10 +1,13 @@
 <?php
+
 namespace timeMonitor\domain\model;
 
 use timeMonitor\domain\vo\Genre;
 
 class Employee
 {
+
+    private int $id;
 
     private User $user;
 
@@ -16,7 +19,7 @@ class Employee
 
     private Genre $genre;
 
-    public function __construct(User $user, string $id, string $name, string $lastName, int $age, Genre $genre)
+    public function __construct(User $user, int $id, string $name, string $lastName, int $age, Genre $genre)
     {
         $this->user = $user;
         $this->userName = $this->name = $name;

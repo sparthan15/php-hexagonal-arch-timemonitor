@@ -23,13 +23,13 @@ class CheckOutInputPortTest extends TestCase
         $employee = TestUtilities::buildFemaleEmployee();
         $employeeCheckIn = TestUtilities::buildTimeRecord($employee, new DateTime());
         $employeeCheckOut = new TimeRecord($employee, "123", $employeeCheckIn->getCheckInDateTime());
-        $this->timeMonitorOutoutPort->method("checkOut")->willReturn($employeeCheckOut);
+        $this->timeMonitorOutoutPort->method("checkOut")->willReturn(true);
         $this->timeMonitorOutoutPort->expects($this->exactly(1))
             ->method("checkOut")
             ->with($employeeCheckOut);
         $this->checkOutInputPort = new CheckOutInputPort($this->timeMonitorOutoutPort);
         $employeeCheckOutUpdated = $this->checkOutInputPort->execute($employeeCheckOut);
 
-        $this->assertSame("123", $employeeCheckOutUpdated->getId());
+        $this->assertTrue($employeeCheckOutUpdated);
     }
 }

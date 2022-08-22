@@ -4,7 +4,7 @@ namespace timeMonitor\application\usecase;
 
 use timeMonitor\domain\model\TimeRecord;
 
-interface RegisterStepOut
+interface CheckOutUseCase
 {
-    public function execute(TimeRecord $timeRecord): array;
+    public function execute(TimeRecord $timeRecord): bool;
 }

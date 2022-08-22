@@ -4,8 +4,8 @@ namespace timeMonitor\application\ports\output;
 
 use timeMonitor\domain\model\TimeRecord;
 
-interface TimeMonitorOutputPort
+abstract class TimeMonitorOutputPort
 {
-    function checkIn(TimeRecord $timeRecord);
-    function checkOut(TimeRecord $timeRecord);
+    abstract public function checkIn(TimeRecord $timeRecord): TimeRecord;
+    abstract public function checkOut(TimeRecord $timeRecord): bool;
 }

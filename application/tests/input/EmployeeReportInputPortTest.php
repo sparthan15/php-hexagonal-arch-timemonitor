@@ -1,25 +1,32 @@
 <?php
 
+use application\ports\output\TimeMonitorOutputPort;
 use tests\util\TestUtilities;
 use timeMonitor\application\ports\input\EmployeeReportInputPort;
-use PHPUnit\Framework\TestCase; 
+use PHPUnit\Framework\TestCase;
+use timeMonitor\application\ports\output\EmployeeReportOutoutPort;
 
-class EmployeeReportTest extends TestCase
+class EmployeeReportInputPortTest extends TestCase
 {
 
     private $employee;
+    private $employeeReportOutputPort;
 
     public function setUp(): void
     {
+        $this->employeeReportOutputPort = $this->createMock(EmployeeReportOutoutPort::class);
         $this->employee = TestUtilities::buildMaleEmployee();
     }
 
     public function test()
     {
-        $employeeReport = new EmployeeReportInputPort();
-        $entryDateTime = new DateTime();
-        $this->assertNotNull($employeeReport->execute(TestUtilities::buildTimeRecord($this->employee, $entryDateTime)));
-    }
+        $this->employeeReportOutputPort->method("getTimeRecordsByemployee")
+            ->with($this->employee)
+            ->willReturn([]);
+        $employeeReport = new EmployeeReportInputPort($this->employeeReportOutputPort);
 
-    
+        $this->employeeReportOutputPort->expects($this->once())
+        ->method("getTimeRecordsByEmployee");
+        $this->assertNotNull($employeeReport->getTimeRecordsByEmployee($this->employee));
+    }
 }

@@ -2,10 +2,10 @@
 namespace timeMonitor\application\ports\input;
 
 use timeMonitor\application\ports\output\TimeMonitorOutputPort;
-use timeMonitor\application\usecase\CheckInUseCase;
+use timeMonitor\application\usecase\CheckOutUseCase;
 use timeMonitor\domain\model\TimeRecord;
 
-class CheckOutInputPort implements CheckInUseCase
+class CheckOutInputPort implements CheckOutUseCase
 {
 
     private $timeMonitorOutputPort;
@@ -15,7 +15,7 @@ class CheckOutInputPort implements CheckInUseCase
         $this->timeMonitorOutputPort = $timeMonitorOutputPort;
     }
 
-    public function execute(TimeRecord $checkoutTimeMomitor)
+    public function execute(TimeRecord $checkoutTimeMomitor):bool
     {
         return $this->timeMonitorOutputPort->checkOut($checkoutTimeMomitor);
     }
