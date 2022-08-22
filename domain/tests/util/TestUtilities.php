@@ -19,7 +19,7 @@ class TestUtilities
 
     public static function buildMaleEmployee(): Employee
     {
-        
+
         return new Employee(TestUtilities::buildUser(), 2, "Carlos", "Gamboa", 37, new Genre(Genre::MALE));
     }
 

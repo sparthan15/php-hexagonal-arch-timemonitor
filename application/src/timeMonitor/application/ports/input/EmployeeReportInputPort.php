@@ -3,8 +3,6 @@
 namespace timeMonitor\application\ports\input;
 
 use timeMonitor\application\ports\output\EmployeeReportOutoutPort;
-use timeMonitor\domain\model\TimeRecord;
-use timeMonitor\application\usecase\EmployeeReport;
 use timeMonitor\application\usecase\EmployeeReportUseCase;
 use timeMonitor\domain\model\Employee;
 
@@ -18,8 +16,8 @@ class EmployeeReportInputPort implements EmployeeReportUseCase
         $this->employeeReportOutputPort = $employeeReportOutputPort;
     }
 
-    function getTimeRecordsByEmployee(Employee $employee): array
+    function getTimeRecordsByEmployee(int $employeeId): array
     {
-        return $this->employeeReportOutputPort->getTimeRecordsByEmployee($employee);
+        return $this->employeeReportOutputPort->getTimeRecordsByEmployee($employeeId);
     }
 }

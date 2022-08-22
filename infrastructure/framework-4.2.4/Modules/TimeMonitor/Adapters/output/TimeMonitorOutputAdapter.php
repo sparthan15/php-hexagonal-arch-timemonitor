@@ -1,8 +1,8 @@
 <?php
 
-namespace Modules\TimeMonitor\Ports\Output;
+namespace Modules\TimeMonitor\Adapters\Output;
 
-use Modules\TimeMonitor\Models\TimeMonitorModel;
+use Modules\TimeMonitor\Models\TimeMonitorRepository;
 use timeMonitor\application\ports\output\TimeMonitorOutputPort;
 use timeMonitor\domain\model\TimeRecord;
 
@@ -11,7 +11,7 @@ class TimeMonitorOutputAdapter extends TimeMonitorOutputPort
 
     private $timeMonitorModel;
 
-    public function __construct(TimeMonitorModel $timeMonitorModel)
+    public function __construct(TimeMonitorRepository $timeMonitorModel)
     {
         $this->timeMonitorModel = $timeMonitorModel;
     }

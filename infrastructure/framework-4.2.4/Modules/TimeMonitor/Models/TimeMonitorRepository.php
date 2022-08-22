@@ -5,7 +5,7 @@ namespace Modules\TimeMonitor\Models;
 use CodeIgniter\Model;
 
 
-class TimeMonitorModel extends Model
+class TimeMonitorRepository extends Model
 {
     protected $table          = 'time_monitor';
     protected $primaryKey     = 'time_momitor_id';

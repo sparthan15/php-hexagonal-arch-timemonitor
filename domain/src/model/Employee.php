@@ -9,7 +9,7 @@ class Employee
 
     private int $id;
 
-    private User $user;
+    private ?User $user;
 
     private string $name;
 
@@ -17,7 +17,7 @@ class Employee
 
     private int $age;
 
-    private Genre $genre;
+    private ?Genre $genre;
 
     public function __construct(User $user, int $id, string $name, string $lastName, int $age, Genre $genre)
     {
@@ -29,6 +29,9 @@ class Employee
         $this->id = $id;
     }
 
+    public static function createWithId(int $id):Employee{
+        return new self(null, $id, "", "", 0, null);
+    }
     public function getUser(): User
     {
         return $this->user;

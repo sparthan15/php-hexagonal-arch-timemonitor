@@ -31,7 +31,10 @@
             "CodeIgniter\\": "system/",
             "timeMonitor\\application\\usecase\\": "../../application/src/timeMonitor/application/usecase/",
             "timeMonitor\\application\\ports\\input\\": "../../application/src/timeMonitor/application/ports/input/",
-            "timeMonitor\\application\\ports\\output\\": "../../application/src/timeMonitor/application/ports/output/"
+            "timeMonitor\\application\\ports\\output\\": "../../application/src/timeMonitor/application/ports/output/",
+            "tests\\util\\": "../../domain/tests/util/",
+            "timeMonitor\\domain\\model\\":"../../domain/src/model/",
+            "timeMonitor\\domain\\vo\\":"../../domain/src/vo/"
         },
         "exclude-from-classmap": [
             "**/Database/Migrations/**"

@@ -21,12 +21,12 @@ class EmployeeReportInputPortTest extends TestCase
     public function test()
     {
         $this->employeeReportOutputPort->method("getTimeRecordsByemployee")
-            ->with($this->employee)
+            ->with($this->employee->getId())
             ->willReturn([]);
         $employeeReport = new EmployeeReportInputPort($this->employeeReportOutputPort);
 
         $this->employeeReportOutputPort->expects($this->once())
         ->method("getTimeRecordsByEmployee");
-        $this->assertNotNull($employeeReport->getTimeRecordsByEmployee($this->employee));
+        $this->assertNotNull($employeeReport->getTimeRecordsByEmployee($this->employee->getId()));
     }
 }

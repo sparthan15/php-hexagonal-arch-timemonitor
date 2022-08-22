@@ -7,5 +7,5 @@ use timeMonitor\domain\model\TimeRecord;
 
 interface EmployeeReportUseCase
 {
-    function getTimeRecordsByEmployee(Employee $employee): array;
+    function getTimeRecordsByEmployee(int $employeeId): array;
 }
