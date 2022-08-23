@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\TimeMonitor\Dtos;
+namespace Modules\TimeMonitor\Adapters\Dtos;
 
 use DateTime;
 

@@ -18,7 +18,12 @@ class TimeMonitorOutputAdapter extends TimeMonitorOutputPort
 
     public function checkIn(TimeRecord $timeRecord): TimeRecord
     {
-        return $this->timeMonitorModel->insert($timeRecord);
+        $data["employee_id"] = $timeRecord->getEmployeeId();
+        $data["checkin_datetime"] = $timeRecord->getCheckInDateTime()->format('Y-m-d H:i:s');
+        $data["status"] = "ACTIVE"; var_dump($data );
+        $insertedId =  $this->timeMonitorModel->insert($data, true);
+
+        return new TimeRecord($timeRecord->getEmployeeId(), $insertedId, $timeRecord->getCheckInDateTime());
     }
 
     public function checkOut(TimeRecord $timeRecord): bool

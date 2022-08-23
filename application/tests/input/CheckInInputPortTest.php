@@ -18,9 +18,8 @@ class CheckInInputPortTest extends TestCase
 
     public function testRegisterCheckInUseCase()
     {
-        $employee = TestUtilities::buildFemaleEmployee();
         $dateTime = new DateTime();
-        $employeeCheckIn = TestUtilities::buildTimeRecord($employee, $dateTime);
+        $employeeCheckIn = TestUtilities::buildTimeRecord(1, $dateTime);
         $this->timeMonitorOutoputPort->method("checkIn")->willReturn($employeeCheckIn);
 
         $this->checkInInputPort = new CheckInInputPort($this->timeMonitorOutoputPort);

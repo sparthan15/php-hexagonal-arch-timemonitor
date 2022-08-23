@@ -1,6 +1,7 @@
 <?php
 
-use Modules\TimeMonitor\Dtos\CheckInRequestDTO;
+use Modules\TimeMonitor\Adapters\Dtos\CheckInRequestDTO;
+use Modules\TimeMonitor\Adapters\Dtos\CheckInResponseDTO;
 use PHPUnit\Framework\TestCase;
 
 class CheckInRequestDTOTest extends TestCase
@@ -14,4 +15,6 @@ class CheckInRequestDTOTest extends TestCase
         $this->assertNotNull($checkInRequest->getEmployeeId());
         $this->assertNotNull($checkInRequest->getCheckInDateTime());
     }
+
+
 }

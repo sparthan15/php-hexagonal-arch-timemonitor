@@ -28,8 +28,8 @@ class TestUtilities
         return new Employee(TestUtilities::buildUser(), 1, "Sonia", "Diaz", 42, new Genre(Genre::FEMALE));
     }
 
-    public static function buildTimeRecord(Employee $employee, DateTime $inDateTime)
+    public static function buildTimeRecord(int $employeeId, DateTime $inDateTime)
     {
-        return new TimeRecord($employee, "", $inDateTime);
+        return new TimeRecord($employeeId, "", $inDateTime);
     }
 }

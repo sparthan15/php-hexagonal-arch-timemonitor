@@ -10,11 +10,15 @@ class TImeMonitorOutputAdapterTest extends TestCase
 
     public function test()
     {
-        $checkIn = TestUtilities::buildTimeRecord(TestUtilities::buildFemaleEmployee(), new Datetime());
+        $employeeId = 1;
+        $checkIn = TestUtilities::buildTimeRecord($employeeId, new Datetime());
+        $data["employee_id"] = 1;
+        $data["checkin_datetime"] = new DateTime();
+        $data["status"] = "ACTIVE";
         $timeMonitorRepository = $this->createMock(TimeMonitorRepository::class);
         $timeMonitorRepository->method("insert")
-        ->with($checkIn)
-        ->willReturn($checkIn);
+        ->with($data)
+        ->willReturn($data);
         $timeMonitorOuputAdapter = new TimeMonitorOutputAdapter($timeMonitorRepository);
         $result = $timeMonitorOuputAdapter->checkIn($checkIn);
         $this->assertNotNull($result);

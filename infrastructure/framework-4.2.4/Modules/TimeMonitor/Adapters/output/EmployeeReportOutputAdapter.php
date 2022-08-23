@@ -2,9 +2,7 @@
 
 namespace Modules\TimeMonitor\Adapters\Output;
 
-use timeMonitor\application\ports\input\EmployeeReportInputPort;
 use timeMonitor\application\ports\output\EmployeeReportOutoutPort;
-use timeMonitor\domain\model\Employee;
 
 class EmployeeReportOutputAdapter implements EmployeeReportOutoutPort
 {

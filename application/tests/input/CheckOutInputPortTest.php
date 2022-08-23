@@ -20,9 +20,8 @@ class CheckOutInputPortTest extends TestCase
 
     public function testCheckOutEmployeeUseCase()
     {
-        $employee = TestUtilities::buildFemaleEmployee();
-        $employeeCheckIn = TestUtilities::buildTimeRecord($employee, new DateTime());
-        $employeeCheckOut = new TimeRecord($employee, "123", $employeeCheckIn->getCheckInDateTime());
+        $employeeCheckIn = TestUtilities::buildTimeRecord(1, new DateTime());
+        $employeeCheckOut = new TimeRecord(1, "123", $employeeCheckIn->getCheckInDateTime());
         $this->timeMonitorOutoutPort->method("checkOut")->willReturn(true);
         $this->timeMonitorOutoutPort->expects($this->exactly(1))
             ->method("checkOut")

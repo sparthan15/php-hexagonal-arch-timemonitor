@@ -9,15 +9,15 @@ class TimeRecord
 {
 
     private ?string $id;
-    private Employee $employee;
+    private int $employee;
     private DateTime $checkInDateTime;
     private ?DateTime $checkOutDateTime;
 
 
-    function __construct(Employee $employee, string $id,  DateTime $inDateTime)
+    function __construct(int $employeeId, string $id,  DateTime $inDateTime)
     {
         $this->id = $id;
-        $this->employee = $employee;
+        $this->employee = $employeeId;
         $this->checkInDateTime = $inDateTime;
         $this->checkOutDateTime = null;
     }
@@ -50,7 +50,7 @@ class TimeRecord
         return $this->checkInDateTime;
     }
 
-    public function getEmployee(): Employee
+    public function getEmployeeId(): int
     {
         return $this->employee;
     }

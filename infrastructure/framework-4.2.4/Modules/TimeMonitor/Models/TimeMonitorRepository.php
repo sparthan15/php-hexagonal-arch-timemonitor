@@ -8,14 +8,14 @@ use CodeIgniter\Model;
 class TimeMonitorRepository extends Model
 {
     protected $table          = 'time_monitor';
-    protected $primaryKey     = 'time_momitor_id';
+    protected $primaryKey     = 'time_monitor_id';
     protected $returnType     = 'object';
     protected $useSoftDeletes = false;
     protected $allowedFields  = [
         'time_monitor_id',
-        'user_id',
-        'check_in_datetime',
-        'check_outin_datetime',
+        'employee_id',
+        'checkin_datetime',
+        'checkout_datetime',
         'created_at',
         'updated_at',
     ];
