@@ -2,6 +2,7 @@
 
 namespace Modules\TimeMonitor\Adapters\Output;
 
+use CodeIgniter\Model;
 use DateTime;
 use Modules\TimeMonitor\Models\TimeMonitorRepository;
 use timeMonitor\application\ports\output\TimeMonitorOutputPort;
@@ -11,9 +12,9 @@ use timeMonitor\domain\vo\CheckInStatus;
 class TimeMonitorOutputAdapter implements TimeMonitorOutputPort
 {
 
-    private $timeMonitorModel;
+    private Model $timeMonitorModel;
 
-    public function __construct(TimeMonitorRepository $timeMonitorModel)
+    public function __construct(Model $timeMonitorModel)
     {
         $this->timeMonitorModel = $timeMonitorModel;
     }
@@ -35,12 +36,6 @@ class TimeMonitorOutputAdapter implements TimeMonitorOutputPort
 
     public function getActiveCheckIn(int $employeeId): array
     {
-        $result = $this->timeMonitorModel->getWhere(['employee_id' => $employeeId, 'status' => CheckInStatus::ACTIVE])->getResultArray();
-        $list = [];
-        foreach($result as $timeRecord){
-            $list[] = new TimeRecord($employeeId, $timeRecord['time_monitor_id'], DateTime::createFromFormat('Y-m-d H:i:s',$timeRecord['checkin_datetime']));
-        }
-      
-        return $list;
+        return $this->timeMonitorModel->getActiveCheckIn($employeeId);
     }
 }

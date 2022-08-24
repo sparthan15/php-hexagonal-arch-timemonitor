@@ -10,7 +10,7 @@ class EmployeeReportOutputAdapter implements EmployeeReportOutoutPort
 
     private  Model $employeeReportOutoutPort;
 
-    public function __construct(EmployeeReportOutoutPort $employeeReportOutoutPort)
+    public function __construct(Model $employeeReportOutoutPort)
     {
         $this->employeeReportOutoutPort = $employeeReportOutoutPort;
     }

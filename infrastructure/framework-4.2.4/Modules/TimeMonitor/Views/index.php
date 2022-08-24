@@ -208,7 +208,7 @@
 
 								?>
 									<tr>
-											<td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>Carlos
+											<td><em class="fab fa-angular fa-lg text-danger me-3"></em> <strong>Carlos
 													Gamboa</strong></td>
 											<td><?=$timeMonitor->getCheckInDateFormatted();?></td>
 											<td><?=$timeMonitor->getCheckInTimeFormatted();?></td>
@@ -218,7 +218,7 @@
 													<button type="button"
 														class="btn p-0 dropdown-toggle hide-arrow"
 														data-bs-toggle="dropdown">
-														<i class="bx bx-dots-vertical-rounded"></i>
+														<em class="bx bx-dots-vertical-rounded"></em>
 													</button>
 													<div class="dropdown-menu">
 														<a class="dropdown-item" href="javascript:void(0);"><i

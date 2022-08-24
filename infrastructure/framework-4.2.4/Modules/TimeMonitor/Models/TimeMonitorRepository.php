@@ -4,7 +4,6 @@ namespace Modules\TimeMonitor\Models;
 
 use CodeIgniter\Model;
 
-
 class TimeMonitorRepository extends Model
 {
     protected $table          = 'time_monitor';

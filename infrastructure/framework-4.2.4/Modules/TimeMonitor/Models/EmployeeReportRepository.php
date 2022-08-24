@@ -8,7 +8,7 @@ use timeMonitor\application\ports\output\EmployeeReportOutoutPort;
 use timeMonitor\domain\model\TimeRecord;
 use timeMonitor\domain\vo\CheckInStatus;
 
-class EmployeeReportRepository extends Model implements EmployeeReportOutoutPort
+class EmployeeReportRepository extends Model 
 {
 
     protected $table          = 'time_monitor';
@@ -30,6 +30,17 @@ class EmployeeReportRepository extends Model implements EmployeeReportOutoutPort
     public $object;
 
     public function getTimeRecordsByEmployee(int $employeeId): array
+    {
+        $result = $this->getWhere(['employee_id' => $employeeId])->getResultArray();
+        $list = [];
+        foreach ($result as $timeRecord) {
+            $list[] = new TimeRecord($employeeId, $timeRecord['time_monitor_id'], DateTime::createFromFormat('Y-m-d H:i:s', $timeRecord['checkin_datetime']));
+        }
+
+        return $list;
+    }
+
+    public function getActiveCheckIn(int $employeeId): array
     {
         $result = $this->getWhere(['employee_id' => $employeeId, 'status' => CheckInStatus::ACTIVE])->getResultArray();
         $list = [];
