@@ -17,4 +17,6 @@ class CheckInInputAdapterTest extends TestCase{
         $result = $adapter->checkIn();
         $this->assertNotNull($result);
     }
+
+    
 }

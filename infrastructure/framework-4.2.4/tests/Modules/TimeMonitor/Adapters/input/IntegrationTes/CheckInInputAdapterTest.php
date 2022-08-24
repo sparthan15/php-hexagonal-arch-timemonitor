@@ -12,15 +12,6 @@ class CheckInInputAdapterTest extends CIUnitTestCase
     use ControllerTestTrait;
     use DatabaseTestTrait;
 
-    public function testIndex()
-    {
-        $result = $this->withUri("")
-            ->controller(CheckInInputAdapter::class)
-
-            ->execute('index');
-
-        $this->assertTrue($result->isOK());
-    }
 
     public function testCheckIn()
     {

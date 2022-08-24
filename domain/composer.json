@@ -4,6 +4,8 @@
             "timeMonitor\\domain\\": "src/",
             "model\\": "model/",
             "vo\\": "vo/",
+            "exception\\": "exception/",
+            "specification\\": "specification/",
             "tests\\util\\": "tests/util/"
         }
     },

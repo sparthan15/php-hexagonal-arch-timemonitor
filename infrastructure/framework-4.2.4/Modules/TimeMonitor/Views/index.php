@@ -189,7 +189,7 @@
 						<!-- Basic Bootstrap Table -->
 						<div class="card">
 
-							<h5 class="card-header">Mis Registros</h5>
+							<h5 class="card-header">Registros activos</h5>
 							<div class="table-responsive text-nowrap">
 								<table class="table" aria-describedby="a">
 									<thead>
@@ -202,11 +202,16 @@
 										</tr>
 									</thead>
 									<tbody class="table-border-bottom-0">
-										<tr>
+								<?php
+								
+								foreach($presenter->activeCheckIn as $timeMonitor){
+
+								?>
+									<tr>
 											<td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>Carlos
 													Gamboa</strong></td>
-											<td>2020-08-17</td>
-											<td>15:55:00</td>
+											<td><?=$timeMonitor->getCheckInDateFormatted();?></td>
+											<td><?=$timeMonitor->getCheckInTimeFormatted();?></td>
 											<td><span class="badge bg-label-success me-1">Activo</span></td>
 											<td>
 												<div class="dropdown">
@@ -224,6 +229,7 @@
 												</div>
 											</td>
 										</tr>
+										<?php } ?>
 										<tr>
 											<td>
 												<nav aria-label="..." class="m-auto">

@@ -13,14 +13,16 @@ class TimeRecordTest extends TestCase
     {
         parent::setUp();
         $this->checkInDate = new DateTime();
-        $this->timeRecord = TestUtilities::buildTimeRecord(TestUtilities::buildMaleEmployee(), $this->checkInDate);
+        $this->timeRecord = TestUtilities::buildTimeRecord(TestUtilities::buildMaleEmployee()->getId(), $this->checkInDate);
     }
 
     public function testTimeRecordStartWithOutCheckOutDate()
     {
         $this->assertNotNull($this->timeRecord->getId());
-        $this->assertNotNull($this->timeRecord->getEmployee());
+        $this->assertNotNull($this->timeRecord->getEmployeeId());
         $this->assertNotNull($this->timeRecord->getCheckInDateTime());
+        $this->assertNotNull($this->timeRecord->getCheckInDateTimeFormatted()); 
+        $this->assertNotNull($this->timeRecord->getCheckInDateTimeFormatted()); 
         $this->expectException(TypeError::class);
         $this->assertNull($this->timeRecord->getCheckOutDateTime());
     }

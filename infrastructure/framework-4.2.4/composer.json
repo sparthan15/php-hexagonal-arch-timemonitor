@@ -34,7 +34,9 @@
             "timeMonitor\\application\\ports\\output\\": "../../application/src/timeMonitor/application/ports/output/",
             "tests\\util\\": "../../domain/tests/util/",
             "timeMonitor\\domain\\model\\":"../../domain/src/model/",
-            "timeMonitor\\domain\\vo\\":"../../domain/src/vo/"
+            "timeMonitor\\domain\\vo\\":"../../domain/src/vo/",
+            "timeMonitor\\domain\\specification\\":"../../domain/src/specification/",
+            "timeMonitor\\domain\\exception\\":"../../domain/src/exception/"
         },
         "exclude-from-classmap": [
             "**/Database/Migrations/**"

@@ -4,7 +4,6 @@ namespace timeMonitor\application\ports\input;
 
 use timeMonitor\application\ports\output\EmployeeReportOutoutPort;
 use timeMonitor\application\usecase\EmployeeReportUseCase;
-use timeMonitor\domain\model\Employee;
 
 class EmployeeReportInputPort implements EmployeeReportUseCase
 {

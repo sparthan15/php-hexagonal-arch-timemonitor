@@ -15,7 +15,10 @@ class EmployeeReportOutputAdapterTest extends TestCase
     public function testGetTimeRecordsByEmployee()
     {
         $this->model = $this->createMock(EmployeeReportRepository::class);
-        $this->model->method("getTimeRecordsByEmployee")->willReturn([]);
+        $this->model->expects($this->once())
+            ->method("getTimeRecordsByEmployee")
+            ->with(1)
+            ->willReturn([]);
         $this->adapter = new EmployeeReportOutputAdapter($this->model);
         $result = $this->adapter->getTimeRecordsByEmployee(1);
         $this->assertNotNull($result);

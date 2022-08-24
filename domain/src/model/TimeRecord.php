@@ -4,31 +4,34 @@ namespace timeMonitor\domain\model;
 
 use DateTime;
 use DateTimeZone;
+use timeMonitor\domain\vo\CheckInStatus;
 
 class TimeRecord
 {
 
     private ?string $id;
-    private int $employee;
+    private int $employeeId;
     private DateTime $checkInDateTime;
     private ?DateTime $checkOutDateTime;
+    private CheckInStatus $status;
 
 
     function __construct(int $employeeId, string $id,  DateTime $inDateTime)
     {
         $this->id = $id;
-        $this->employee = $employeeId;
+        $this->employeeId = $employeeId;
         $this->checkInDateTime = $inDateTime;
         $this->checkOutDateTime = null;
+        $this->status = new CheckInStatus(CheckInStatus::ACTIVE);
     }
 
 
-    public function getId():string
+    public function getId(): string
     {
         return $this->id;
     }
 
-    public function setId($id):TimeRecord
+    public function setId($id): TimeRecord
     {
         $this->id = $id;
         return $this;
@@ -50,8 +53,34 @@ class TimeRecord
         return $this->checkInDateTime;
     }
 
+    public function getCheckInDateTimeFormatted(): string
+    {
+        return $this->checkInDateTime->format('Y-m-d H:i:s');
+    }
+
+    public function getCheckInDateFormatted(): string
+    {
+        return $this->checkInDateTime->format('Y-m-d');
+    }
+
+    public function getCheckInTimeFormatted(): string
+    {
+        return $this->checkInDateTime->format('H:i:s');
+    }
+
     public function getEmployeeId(): int
     {
-        return $this->employee;
+        return $this->employeeId;
+    }
+
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    public function setStatusToCheckedOut()
+    {
+        $this->status = new CheckInStatus(CheckInStatus::CHECKED_OUT);
+        return $this;
     }
 }
