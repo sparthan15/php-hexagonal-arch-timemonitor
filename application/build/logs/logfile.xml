@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="5" assertions="9" errors="0" warnings="0" failures="0" skipped="0" time="0.020107">
+    <testsuite name="application" tests="5" assertions="9" errors="0" warnings="0" failures="0" skipped="0" time="0.020107">
+      <testsuite name="CheckInInputPortTest" file="D:\php\time_momitor\application\tests\input\CheckInInputPortTest.php" tests="2" assertions="4" errors="0" warnings="0" failures="0" skipped="0" time="0.017233">
+        <testcase name="testCheckInUseCaseOk" class="CheckInInputPortTest" classname="CheckInInputPortTest" file="D:\php\time_momitor\application\tests\input\CheckInInputPortTest.php" line="21" assertions="2" time="0.015776"/>
+        <testcase name="testCheckInUseCaseValidationFailed" class="CheckInInputPortTest" classname="CheckInInputPortTest" file="D:\php\time_momitor\application\tests\input\CheckInInputPortTest.php" line="39" assertions="2" time="0.001457">
+          <system-out>ACTIVE</system-out>
+        </testcase>
+      </testsuite>
+      <testsuite name="CheckOutInputPortTest" file="D:\php\time_momitor\application\tests\input\CheckOutInputPortTest.php" tests="1" assertions="2" errors="0" warnings="0" failures="0" skipped="0" time="0.000916">
+        <testcase name="testCheckOutEmployeeUseCase" class="CheckOutInputPortTest" classname="CheckOutInputPortTest" file="D:\php\time_momitor\application\tests\input\CheckOutInputPortTest.php" line="21" assertions="2" time="0.000916"/>
+      </testsuite>
+      <testsuite name="EmployeeReportInputPortTest" file="D:\php\time_momitor\application\tests\input\EmployeeReportInputPortTest.php" tests="1" assertions="2" errors="0" warnings="0" failures="0" skipped="0" time="0.001847">
+        <testcase name="test" class="EmployeeReportInputPortTest" classname="EmployeeReportInputPortTest" file="D:\php\time_momitor\application\tests\input\EmployeeReportInputPortTest.php" line="21" assertions="2" time="0.001847"/>
+      </testsuite>
+      <testsuite name="aaTest" file="D:\php\time_momitor\application\tests\input\aaTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.000111">
+        <testcase name="test" class="aaTest" classname="aaTest" file="D:\php\time_momitor\application\tests\input\aaTest.php" line="11" assertions="1" time="0.000111"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>

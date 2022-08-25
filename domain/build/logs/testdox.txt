@@ -1,0 +1,4 @@
+Check In Specification
+ [x] Given not exists an active check in then validation pass
+ [x] Given exists an active check in then validation does not pass
+

@@ -1,1 +1,0 @@
-C:37:"PHPUnit\Runner\DefaultTestResultCache":313:{a:2:{s:7:"defects";a:0:{}s:5:"times";a:5:{s:12:"aaTest::test";d:0;s:42:"CheckInInputPortTest::testCheckInUseCaseOk";d:0.023;s:56:"CheckInInputPortTest::testCheckInUseCaseValidationFailed";d:0.001;s:50:"CheckOutInputPortTest::testCheckOutEmployeeUseCase";d:0.001;s:33:"EmployeeReportInputPortTest::test";d:0.002;}}}

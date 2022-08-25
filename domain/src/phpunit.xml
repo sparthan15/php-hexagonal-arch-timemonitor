@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<phpunit
+    backupGlobals="false"
+    backupStaticAttributes="false"
+    bootstrap="vendor/autoload.php"
+    colors="true"
+    convertErrorsToExceptions="true"
+    convertNoticesToExceptions="true"
+    convertWarningsToExceptions="true"
+    processIsolation="false"
+    stopOnFailure="false">
+    <testsuites>
+        <testsuite name="domain">
+            <directory>./tests</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">./src/</directory>
+        </whitelist>
+    </filter>
+    <logging>
+        <testdoxHtml outputFile="./build/logs/testdox.html"/>
+        <testdoxText outputFile="./build/logs/testdox.txt"/>
+        <junit outputFile="./build/logs/logfile.xml"/>
+    </logging>
+   
+</phpunit>
