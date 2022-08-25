@@ -3,7 +3,7 @@
 use PHPUnit\Framework\TestCase;
 use tests\util\TestUtilities;
 use timeMonitor\application\ports\input\CheckInInputPort;
-use timeMonitor\application\ports\output\TimeMonitorOutputPort;
+use timeMonitor\application\ports\output\TimeMonitorOutputPort; 
 use timeMonitor\domain\exception\ActiveCheckInException;
 
 class CheckInInputPortTest extends TestCase

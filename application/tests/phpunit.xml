@@ -16,9 +16,15 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/Tests/PHPUnitConfigurat
 <phpunit bootstrap="bootstrap.php" 
          convertErrorsToExceptions="true"
          colors="true" >
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">/src/*</directory>
+ 
+        </whitelist>
+    </filter>
     <coverage includeUncoveredFiles="true" processUncoveredFiles="true">
         <include>
-            <directory suffix=".php">./</directory>
+            <directory suffix=".php">/src/*</directory>
         </include>
 		
         <report>

@@ -1,0 +1,13 @@
+Check In Input Port
+ [x] Check in use case ok
+ [x] Check in use case validation failed
+
+Check Out Input Port
+ [x] Check out employee use case
+
+Employee Report Input Port
+ [x] 
+
+aa
+ [x] 
+

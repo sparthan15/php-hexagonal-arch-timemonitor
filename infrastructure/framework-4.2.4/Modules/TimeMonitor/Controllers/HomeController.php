@@ -2,8 +2,7 @@
 
 namespace Modules\TimeMonitor\Controllers;
 
-use App\Controllers\BaseController;
-use Modules\TimeMonitor\Adapters\Dtos\IndexPresenter;
+use App\Controllers\BaseController; 
 use timeMonitor\application\usecase\EmployeeReportUseCase;
 
 class HomeController extends BaseController
@@ -14,7 +13,7 @@ class HomeController extends BaseController
     public function __construct(EmployeeReportUseCase $employeeReportUseCase)
     {
         $this->employeeReportUseCase = $employeeReportUseCase;
-        $this->presenter = new IndexPresenter();
+        $this->presenter = new IndexPre ();
     }
 
     public function index()

@@ -2,3 +2,5 @@
 /domain/vendor
 /application/vendor
 /nbproject/private/
+/.metadata/
+/application/nbproject/private/

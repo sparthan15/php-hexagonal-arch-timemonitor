@@ -352,6 +352,7 @@
 			<attribute name="composer" value="vendor"/>
 		</attributes>
 	</buildpathentry>
+	<buildpathentry kind="src" path="Modules"/>
 	<buildpathentry kind="src" path="vendor/phpunit/php-invoker/src">
 		<attributes>
 			<attribute name="composer" value="vendor"/>

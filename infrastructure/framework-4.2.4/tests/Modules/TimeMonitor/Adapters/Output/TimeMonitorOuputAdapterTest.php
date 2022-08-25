@@ -8,7 +8,7 @@ use tests\util\TestUtilities;
 class TImeMonitorOutputAdapterTest extends TestCase
 {
 
-    public function test()
+    public function testChecIn()
     {
         $employeeId = 1;
         $checkIn = TestUtilities::buildTimeRecord($employeeId, new Datetime());

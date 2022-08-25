@@ -1,0 +1,22 @@
+Employee
+ [x] User properties
+ [x] User is male
+ [x] User is female
+
+Time Record
+ [x] Time record start with out check out date
+ [x] Setters
+
+User
+ [x] User properties
+ [x] User is active
+ [x] User is not active
+
+Check In Specification
+ [x] Given not exists an active check in then validation pass
+ [x] Given exists an active check in then validation does not pass
+
+Check In Status
+ [x] Check in status true
+ [x] Check in status false
+
